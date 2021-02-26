@@ -1,4 +1,4 @@
-package com.android.vp;
+package com.android.vp.util;
 
 import android.graphics.Color;
 

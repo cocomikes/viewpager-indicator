@@ -8,10 +8,10 @@ import android.view.View;
 
 import androidx.viewpager.widget.ViewPager;
 
-import java.lang.reflect.Field;
+import com.android.vp.viewpager.DurationScroller;
+import com.android.vp.viewpager.SViewPager;
 
-import io.library.android.viewpager.DurationScroller;
-import io.library.android.viewpager.ScrollControlViewPager;
+import java.lang.reflect.Field;
 
 /**
  * 轮播Banner
@@ -58,8 +58,8 @@ public class BannerComponent extends IndicatorViewPager {
 
             @Override
             public void onItemSelected(View selectItemView, int select, int preSelect) {
-                if (viewPager instanceof ScrollControlViewPager) {
-                    setCurrentItem(select, ((ScrollControlViewPager) viewPager).isCanScroll());
+                if (viewPager instanceof SViewPager) {
+                    setCurrentItem(select, ((SViewPager) viewPager).isCanScroll());
                 } else {
                     setCurrentItem(select, true);
                 }

@@ -6,8 +6,8 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-import io.library.android.ColorGradient;
-import io.library.android.indicator.Indicator;
+import com.android.vp.util.ColorGradient;
+import com.android.vp.indicator.Indicator;
 
 /**
  *
@@ -17,7 +17,7 @@ import io.library.android.indicator.Indicator;
 public class OnTransitionTextListener implements Indicator.OnTransitionListener {
     private float selectSize = -1;
     private float unSelectSize = -1;
-    private io.library.android.ColorGradient gradient;
+    private ColorGradient gradient;
     private float dFontFize = -1;
 
     private boolean isPxSize = false;
@@ -61,7 +61,7 @@ public class OnTransitionTextListener implements Indicator.OnTransitionListener 
     }
 
     public final OnTransitionTextListener setColor(int selectColor, int unSelectColor) {
-        gradient = new io.library.android.ColorGradient(unSelectColor, selectColor, 100);
+        gradient = new ColorGradient(unSelectColor, selectColor, 100);
         return this;
     }
 

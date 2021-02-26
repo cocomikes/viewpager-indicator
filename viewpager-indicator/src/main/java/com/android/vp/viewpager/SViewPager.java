@@ -6,16 +6,16 @@ import android.view.MotionEvent;
 
 import androidx.viewpager.widget.ViewPager;
 
-public class ScrollControlViewPager extends ViewPager {
+public class SViewPager extends ViewPager {
     //默认可滚动
     private boolean canScroll;
 
-    public ScrollControlViewPager(Context context) {
+    public SViewPager(Context context) {
         super(context);
         canScroll = true;
     }
 
-    public ScrollControlViewPager(Context context, AttributeSet attrs) {
+    public SViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
         canScroll = true;
     }

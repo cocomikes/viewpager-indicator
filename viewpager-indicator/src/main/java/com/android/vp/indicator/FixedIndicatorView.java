@@ -16,11 +16,10 @@ import android.widget.Scroller;
 import androidx.core.view.ViewCompat;
 import androidx.viewpager.widget.ViewPager;
 
+import com.android.vp.indicator.slidebar.ScrollBar;
+
 import java.util.LinkedList;
 import java.util.List;
-
-import io.library.android.indicator.slidebar.ScrollBar;
-import io.library.android.indicator.slidebar.ScrollBar.Gravity;
 
 public class FixedIndicatorView extends LinearLayout implements Indicator {
 
@@ -330,11 +329,11 @@ public class FixedIndicatorView extends LinearLayout implements Indicator {
 
     @Override
     protected void dispatchDraw(Canvas canvas) {
-        if (scrollBar != null && scrollBar.getGravity() == Gravity.CENTENT_BACKGROUND) {
+        if (scrollBar != null && scrollBar.getGravity() == ScrollBar.Gravity.CENTENT_BACKGROUND) {
             drawSlideBar(canvas);
         }
         super.dispatchDraw(canvas);
-        if (scrollBar != null && scrollBar.getGravity() != Gravity.CENTENT_BACKGROUND) {
+        if (scrollBar != null && scrollBar.getGravity() != ScrollBar.Gravity.CENTENT_BACKGROUND) {
             drawSlideBar(canvas);
         }
     }

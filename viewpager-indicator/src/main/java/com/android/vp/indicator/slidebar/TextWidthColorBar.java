@@ -17,7 +17,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.widget.TextView;
 
-import io.library.android.indicator.Indicator;
+import com.android.vp.indicator.Indicator;
 
 /**
  * tab的文本多宽scrollbar就显示多宽，实现新浪个人首页的tab的scrollbar效果

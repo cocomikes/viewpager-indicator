@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import io.library.android.indicator.slidebar.ScrollBar;
+import com.android.vp.indicator.slidebar.ScrollBar;
 
 /**
  * Created by LuckyJayce on 2016/6/14.

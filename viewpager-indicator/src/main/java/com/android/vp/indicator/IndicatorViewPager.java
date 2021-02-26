@@ -22,11 +22,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import io.library.android.indicator.Indicator.IndicatorAdapter;
-import io.library.android.indicator.Indicator.OnTransitionListener;
-import io.library.android.indicator.slidebar.ScrollBar;
-import io.library.android.viewpager.RecyclingPagerAdapter;
-import io.library.android.viewpager.ScrollControlViewPager;
+import com.android.vp.indicator.slidebar.ScrollBar;
+import com.android.vp.viewpager.RecyclingPagerAdapter;
+import com.android.vp.viewpager.SViewPager;
 
 /**
  * 将indicatorView，ViewPager联合使用
@@ -60,8 +58,8 @@ public class IndicatorViewPager {
 
             @Override
             public void onItemSelected(View selectItemView, int select, int preSelect) {
-                if (viewPager instanceof ScrollControlViewPager) {
-                    viewPager.setCurrentItem(select, ((ScrollControlViewPager) viewPager).isCanScroll());
+                if (viewPager instanceof SViewPager) {
+                    viewPager.setCurrentItem(select, ((SViewPager) viewPager).isCanScroll());
                 } else {
                     viewPager.setCurrentItem(select, anim);
                 }
@@ -126,7 +124,7 @@ public class IndicatorViewPager {
      *
      * @param onTransitionListener
      */
-    public void setIndicatorOnTransitionListener(OnTransitionListener onTransitionListener) {
+    public void setIndicatorOnTransitionListener(Indicator.OnTransitionListener onTransitionListener) {
         indicatorView.setOnTransitionListener(onTransitionListener);
     }
 
@@ -308,7 +306,7 @@ public class IndicatorViewPager {
             }
         };
 
-        private IndicatorAdapter indicatorAdapter = new IndicatorAdapter() {
+        private Indicator.IndicatorAdapter indicatorAdapter = new Indicator.IndicatorAdapter() {
 
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -349,7 +347,7 @@ public class IndicatorViewPager {
         }
 
         @Override
-        public IndicatorAdapter getIndicatorAdapter() {
+        public Indicator.IndicatorAdapter getIndicatorAdapter() {
             return indicatorAdapter;
         }
     }
@@ -405,7 +403,7 @@ public class IndicatorViewPager {
             };
         }
 
-        private IndicatorAdapter indicatorAdapter = new IndicatorAdapter() {
+        private Indicator.IndicatorAdapter indicatorAdapter = new Indicator.IndicatorAdapter() {
 
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -447,7 +445,7 @@ public class IndicatorViewPager {
         }
 
         @Override
-        public IndicatorAdapter getIndicatorAdapter() {
+        public Indicator.IndicatorAdapter getIndicatorAdapter() {
             return indicatorAdapter;
         }
     }
@@ -503,7 +501,7 @@ public class IndicatorViewPager {
             };
         }
 
-        private IndicatorAdapter indicatorAdapter = new IndicatorAdapter() {
+        private Indicator.IndicatorAdapter indicatorAdapter = new Indicator.IndicatorAdapter() {
 
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -545,7 +543,7 @@ public class IndicatorViewPager {
         }
 
         @Override
-        public IndicatorAdapter getIndicatorAdapter() {
+        public Indicator.IndicatorAdapter getIndicatorAdapter() {
             return indicatorAdapter;
         }
     }

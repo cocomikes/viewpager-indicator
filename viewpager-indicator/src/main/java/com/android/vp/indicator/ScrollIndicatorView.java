@@ -19,8 +19,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
 import androidx.viewpager.widget.ViewPager;
 
-import io.library.android.indicator.slidebar.ScrollBar;
-import io.library.android.indicator.slidebar.ScrollBar.Gravity;
+import com.android.vp.indicator.slidebar.ScrollBar;
 
 /**
  * 主要用于多个tab可以进行滑动
@@ -368,11 +367,11 @@ public class ScrollIndicatorView extends HorizontalScrollView implements Indicat
                 }
 
                 ScrollBar scrollBar = fixedIndicatorView.getScrollBar();
-                if (scrollBar != null && scrollBar.getGravity() == Gravity.CENTENT_BACKGROUND) {
+                if (scrollBar != null && scrollBar.getGravity() == ScrollBar.Gravity.CENTENT_BACKGROUND) {
                     drawScrollBar(canvas);
                 }
                 pinnedTabView.draw(canvas);
-                if (scrollBar != null && scrollBar.getGravity() != Gravity.CENTENT_BACKGROUND) {
+                if (scrollBar != null && scrollBar.getGravity() != ScrollBar.Gravity.CENTENT_BACKGROUND) {
                     drawScrollBar(canvas);
                 }
 

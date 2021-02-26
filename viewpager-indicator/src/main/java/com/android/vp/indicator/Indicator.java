@@ -15,10 +15,10 @@ package com.android.vp.indicator;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.vp.indicator.slidebar.ScrollBar;
+
 import java.util.LinkedHashSet;
 import java.util.Set;
-
-import io.library.android.indicator.slidebar.ScrollBar;
 
 /**
  * 指示器
